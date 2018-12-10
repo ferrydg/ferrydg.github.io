@@ -6,7 +6,7 @@
 
     <script src="js/companion.js" data-service-worker="./sw.js"></script>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -17,6 +17,10 @@
   </span>
 </nav>
 <div class="container">
+    <h1>Non-cached page</h1>
+    <p>
+        This page should fail when offline.
+    </p>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra interdum urna at dictum. Donec
         mollis vitae dui sit amet scelerisque. In erat turpis, suscipit sit amet feugiat in, fermentum et nulla.
@@ -25,9 +29,6 @@
         Suspendisse viverra sapien nec urna ultricies interdum. Nam molestie lacus vulputate magna porttitor, vitae
         commodo tellus commodo. Nunc fringilla massa euismod mauris porta imperdiet. Morbi sollicitudin eros id lectus
         cursus feugiat. Integer id arcu in sapien ultrices commodo placerat in mauris.
-    </p>
-    <p>
-        <a href="noncached.html">Non-cached page</a>
     </p>
     <p>
         Nunc et egestas magna. Donec eu lorem tellus. Integer elementum bibendum metus, non fermentum dolor. Mauris

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>Offline</title>
+    <title>Service worker demo</title>
+
+    <script src="js/companion.js" data-service-worker="./sw.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
-<body style="margin:0;">
-
-<div style="width: 100%; height:100%;">
-    <div style="background-color: #002328; color: #ffffff; padding: 24px;">
-        <h1 style="margin:0; padding:0; text-align: center; font-size: 92px;">OFFLINE</h1>
-    </div>
-
-    <div style="font-size: 60px; padding: 100px 42px;">
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-text">
+    Service worker demo
+  </span>
+</nav>
+<div class="container">
+    <p>
         <img src="svg/sad.svg" width="100%"/>
-        <p>
-            It seems you are offline.
-        </p>
-        <p>
-            Please call 010-4081111 for information.
-        </p>
+    <p>
+        It seems you are offline.
+    </p>
+    <p>
+        Please call 010-4081111 for information.
+    </p>
 
-    </div>
 </div>
 
 </body>
