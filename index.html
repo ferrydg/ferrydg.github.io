@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Service worker demo</title>
 
-    <script src="js/companion.js" data-service-worker="./sw.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.error('Error', err));
+      }
+    </script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
