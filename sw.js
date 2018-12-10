@@ -2,7 +2,7 @@ importScripts('js/sw-toolbox.js');
 
 toolbox.options.debug = true;
 
-toolbox.precache(['/offline.html', '/svg/sad.svg']);
+toolbox.precache(['/offline.html', '/svg/sad.svg', '/js/sw-toolbox.js']);
 
 // toolbox.router.get('/',
 //   function(request, values, options) {
