@@ -2,7 +2,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(async function() {
     const cache = await caches.open('demo-cache');
     await cache.addAll([
-      '/css/bootstrap.css',
+      '/css/bootstrap.min.css',
       '/css/style.css',
       '/offline.html',
       '/svg/sad.svg'
