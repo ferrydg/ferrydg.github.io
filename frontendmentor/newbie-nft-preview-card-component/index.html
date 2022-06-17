@@ -83,7 +83,22 @@
       grid-area: image;
       width: 100%;
       border-radius: 1em;
+      position: relative;
       overflow: hidden;
+    }
+
+    .component .image:hover::before {
+      background-color: var(--primary-soft-blue);
+      background-image: url(images/icon-view.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: .8;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
 
     img {
