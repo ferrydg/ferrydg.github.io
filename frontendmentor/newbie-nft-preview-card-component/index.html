@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+
+    }
+
+    *+* {
+      margin-top: 1em;
+    }
+
+    :root {
+      --primary-soft-blue: hsl(215, 51%, 70%);
+      --primary-cyan: hsl(178, 100%, 50%);
+
+      --bg-main: hsl(217, 54%, 11%);
+      --bg-card: hsl(216, 50%, 16%);
+      --line: hsl(215, 32%, 27%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--white);
+      font-size: 18px;
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .component {
+      background-color: var(--bg-card);
+      border-radius: 1.5em;
+      box-shadow: 0 .5em 5em .5em black;
+      color: var(--primary-soft-blue);
+      display: grid;
+      grid-template-areas:
+        'image image'
+        'title title'
+        'description description'
+        'value time'
+        'footer footer';
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1.5em;
+      width: 18em;
+    }
+
+    .component a {
+      grid-area: title;
+    }
+
+    .component p {
+      grid-area: description;
+    }
+
+    .component .image {
+      grid-area: image;
+      width: 100%;
+      border-radius: 1em;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .component .value {
+      grid-area: value;
+      color: var(--primary-cyan);
+      margin-top: 2em;
+    }
+
+    .component .value span,
+    .component .time span {
+      margin-top: 2em;
+      padding-left: 1.2em;
+      position: relative;
+    }
+
+    .component .value span::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1em;
+      width: 1em;
+      background-image: url(images/icon-ethereum.svg);
+      background-repeat: no-repeat;
+    }
+
+    .component .time {
+      grid-area: time;
+      margin-top: 2em;
+      text-align: right;
+    }
+
+    .component .time span::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1em;
+      width: 1em;
+      background-image: url(images/icon-clock.svg);
+      background-repeat: no-repeat;
+    }
+
+    .component .footer {
+      grid-area: footer;
+      border-top: 1px solid var(--line);
+      padding-top: 1em;
+      position: relative;
+    }
+
+    .footer img {
+      border-radius: 50%;
+      border: 2px solid var(--white);
+      height: 1.5em;
+      margin-bottom: -.5em;
+      margin-right: .5em;
+      width: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="component">
+      <div class="image">
+        <img title="image" src="images/image-equilibrium.jpg" />
+      </div>
+      <a href="#" title="Link to Equilibrium #3429">
+        <h1>Equilibrium #3429</h1>
+      </a>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="value"><span>0.041 ETH</span></div>
+      <div class="time"><span>3 days left</span></div>
+
+      <div class="footer">
+        <img src="images/image-avatar.png" />
+        Creation of <a href="#" title="Link to profile">Jules Wyvern</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
